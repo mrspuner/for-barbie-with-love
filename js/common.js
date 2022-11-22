@@ -119,8 +119,10 @@ let currentUrl = window.location.hostname;
 let qrImg = $(".download__qr-code");
 
 function changeQR () {
-		if (currentUrl == "dev-fbwl.ru") {
-			$(qrImg).attr("src", "../images/fbwl_qr__stage.png");
+		if (currentUrl == "fbwl.ru") {
+			$(qrImg).attr("src", "../images/fbwl_qr__prod.png");
+			$(".download__btn a").attr("href", " https://app.fbwl.ru");
+			$(".header__mobile__open .btn a").attr("href", " https://app.fbwl.ru");
 		}
 		else return;
 }
