@@ -166,6 +166,8 @@ h4 {
 li {
 	list-style-type: none;
 }
+
+
 /*MENU*/
 a {
 	transition: 0.2s;
@@ -210,6 +212,7 @@ a {
 	font-weight: bold;
 	color:  #FF419D;
 }
+
 
 /*Main screen*/
 .main {
@@ -2030,9 +2033,6 @@ h4 {
 		width: calc(100% + 20px);
     left: -20px;
 	}
-	.main__img_2 {
-		border-radius: 8px 0 0 8px ;
-	}
 	.main__content_2 {
 		width: calc(100% + 40px);
     left: -20px;
@@ -2071,7 +2071,7 @@ h4 {
 		gap: 6px;
 	}
 	.main__img_2 {
-    width: calc(100% - 127px);
+    width: calc(100% - 135px);
 	}
 	.main__img_3, .main__img_4 {
     width: calc((100% - 6px) / 2);
@@ -2214,4 +2214,110 @@ a.restore:hover {
 .input__btn:hover {
 	box-shadow: 10px 10px 0 -2px #F0399C, 10px 10px 0 0px var(--main);
 	color: #F0399C;
+}
+
+
+/*DOWNLOAD APP*/
+.download__wrap {
+	padding: calc(20vh + 20px) 0;
+}
+
+.download .main__img_5 {
+	top: 0;
+}
+
+.download .main__img_width_329 {
+	width: 22.4375em;
+}
+
+.download .main__img_height_l {
+	height: 15.25em;
+}
+
+.download__left {
+	padding-top: 0;
+	position: relative;
+}
+
+.download__text {
+	margin-bottom: 32px;
+}
+
+.download__qr-code {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border: 2px solid #231b1f;
+	border-radius: 10px;
+}
+
+.download .cinemaimg:before, .download .cinemaimg::after {
+	background-image: url("../images/cinema-line_download.svg");
+}
+@media (max-width: 1100px) {
+	.download .main__img_2 {
+    width: calc(100% - (7.6125em + 4px));
+	}
+
+	.download .main__img_6 {
+		width: calc(100% - (6.8125em * 2) - 2em)
+	}
+
+	.download .main__img_6 img {
+		object-position: center;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.download .main__img_height_l {
+    height: 12.25em;
+	}
+
+	.download .main__img_2 {
+    width: calc(100% - (129px + 10px));
+	}
+
+	.download .main__img_5, .download .main__img_6 {
+		width: calc((100% - 10px) / 2);
+	}
+
+	.download .main__icon_3 {
+    left: 17%;
+    top: 50%;
+	}
+
+	.download__wrap {
+		padding: calc(5vh + 20px) 0;
+	}
+}
+
+@media (max-width: 850px) and (min-width: 576px) {
+	.download__qr-code {
+    right: 0;
+    left: unset;
+    top: 0;
+    /* margin: auto; */
+    width: 100px;
+	}
+
+	.download__title, .download__text {
+    width: calc(100% - (10px + 139px));
+    text-align: left;
+	}
+}
+
+@media (max-width: 576px) {
+	.download__title {
+		margin-bottom: 1em;
+	}
+
+	.download__left {
+    margin-bottom: 2em;
+}
+}
+
+@media (max-width: 480px) {
+	.download .main__img_6 {
+		width: 42vw;
+	}
 }

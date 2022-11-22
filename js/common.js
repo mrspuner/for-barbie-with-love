@@ -113,3 +113,16 @@ $('body').on('click', '.password-checkbox', function(){
 $(".close__tooltip").click(function() {
 	$('.login__tooltip').hide('');
 });
+
+
+let currentUrl = window.location.hostname;
+let qrImg = $(".download__qr-code");
+
+function changeQR () {
+		if (currentUrl == "dev-fbwl.ru") {
+			$(qrImg).attr("src", "../images/fbwl_qr__stage.png");
+		}
+		else return;
+}
+
+window.addEventListener('DOMContentLoaded', changeQR);
